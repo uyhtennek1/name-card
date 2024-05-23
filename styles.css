@@ -136,7 +136,7 @@ main:hover #name-card {
 #card-content>#contact {
     display: flex;
     justify-content: space-evenly;
-    margin: 8px 40px 0 0;
+    margin: 5px 40px 0 0;
 }
 
 #card-content>#contact img {
