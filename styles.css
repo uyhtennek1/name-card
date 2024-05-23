@@ -41,6 +41,7 @@ main:hover #name-card {
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
+    border-radius: 10px;
 }
 
 #front {
