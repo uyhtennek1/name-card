@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     box-sizing: border-box;
+}
+
+:root {
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
 }
 
 body {
@@ -20,9 +26,10 @@ main #name-card {
     width: 100%;
     height: 100%;
     position: relative;
-    transition: transform 0.35s;
+    transition: transform 1s;
     box-shadow: 2px 5px 8px 0px #D2D0E5;
     border-radius: 10px;
+    transform-style: preserve-3d;
 }
 
 main:hover #name-card {
@@ -33,15 +40,12 @@ main:hover #name-card {
     width: 100%;
     height: 100%;
     position: absolute;
-}
-
-#front, #back {
-    transform: rotateY(0deg);
     backface-visibility: hidden;
 }
 
 #front {
     padding: 10px;
+    transform: rotateY(0deg);
 }
 
 #front img {
@@ -54,4 +58,94 @@ main:hover #name-card {
 #back {
     transform: rotateY(180deg);
     background-color: white;
+    position: relative;
+}
+
+.card-id, #card-content #greeting {
+    font-family: "Bebas Neue";
+}
+
+.card-id {
+    color: red;
+    font-size: 3rem;
+    position: absolute;
+    padding: 12px;
+}
+
+.invert-card-id {
+    transform: scale(-1);
+    bottom: 0;
+    right: 0;
+}
+
+.card-type {
+    display: block;
+}
+
+#card-content {
+    height: 100%;
+    font-size: 1.2rem;
+    margin: 20px;
+    text-align: center;
+}
+
+#card-content>#greeting {
+    font-size: 3.2rem;
+    line-height: 70px;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+#card-content>img {
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto 1rem auto;
+}
+
+#card-content>#name {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+#card-content>#occupation {
+    font-size: 0.9rem;
+}
+
+#card-content>#meme {
+    width: 123px;
+    border: 1px solid #363b3d;
+    line-height: 30px;
+    margin-top: 1.2rem;
+    margin-left: 36px;
+}
+
+#card-content>#meme>p {
+    width: 145px;
+}
+
+#card-content>#contact-label {
+    margin-top: 1.4rem;
+    font-size: 1rem;
+    text-align: start;
+    margin-left: 20px;
+}
+
+#card-content>#contact {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8px 40px 0 0;
+}
+
+#card-content>#contact img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+}
+
+#card-content>#contact span {
+    font-size: 36px;
+    color: #363b3d;
 }
